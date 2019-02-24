@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if (env('DISABLE_MIDDLEWARE', false)) {
+            $this->app->instance('middleware.disable', true);
+        }
     }
 }
