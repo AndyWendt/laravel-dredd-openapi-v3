@@ -1,0 +1,21 @@
+get:
+  summary: Receives backfeed data
+  parameters:
+    - in: path
+      name: brand
+      description: Brand Name
+      required: true
+      example: centurylink
+      schema:
+        type: string
+        enum: [centurylink]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../components/requestBodies/BackfeedPost.yml"
+
+  responses:
+    '200':
+      description: We received the data.

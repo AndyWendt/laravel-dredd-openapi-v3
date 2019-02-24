@@ -1,0 +1,22 @@
+type: object
+properties:
+  data:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: the order id
+        example: 1234
+      promo_code:
+        type: integer
+        description: the promo code for the order
+        example: 234353
+      status:
+        type: string
+        description: the status of the order
+        enum: [pending, cancelled, scheduled]
+        example: pending
+    required:
+      - id
+      - promo_code
+      - status

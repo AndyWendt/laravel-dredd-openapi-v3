@@ -1,0 +1,14 @@
+type: object
+properties:
+  name:
+    type: string
+    example: Super Saver Long Distance
+  quantity:
+    type: number
+    example: "1"
+  type:
+    type: string
+    example: voice
+  status:
+    type: string
+    example: CONFIRMED

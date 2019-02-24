@@ -1,0 +1,23 @@
+---
+openapi: 3.0.0
+info:
+  title: Dredd Testing Demo
+  description: Laravel Dredd Testing Documentation
+  version: v2
+servers:
+  - url: test.dev
+    description: test Server
+
+paths:
+  "/v1/posts/{post_id}":
+    $ref: "./paths/posts.yml"
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+  requestBodies:
+  responses:

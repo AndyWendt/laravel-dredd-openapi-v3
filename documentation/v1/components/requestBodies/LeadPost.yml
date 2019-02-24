@@ -1,0 +1,31 @@
+type: object
+required:
+  - promo_code
+  - customer
+  - brand
+properties:
+  promo_code:
+    type: string
+    example: "123456"
+  customer:
+    $ref: "../schemas/OrderCustomer.yml"
+  brand:
+    type: string
+    enum:
+      - att
+      - dish
+      - directv
+      - earthlink
+      - centurylink
+      - enercare
+      - frontier
+      - hughesnet
+      - qwest
+      - vivint
+      - verizon
+      - verizonwireless
+      - windstream
+      - viasat
+      - verizonsmb
+      - verizonmb
+    example: "verizon"

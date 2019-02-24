@@ -1,0 +1,5 @@
+type: object
+properties:
+  accountNumber:
+    type: string
+    example: "213122-asdfasdf-3232123-asdfa"

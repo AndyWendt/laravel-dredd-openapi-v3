@@ -1,0 +1,9 @@
+{
+    "private": true,
+    "scripts": {},
+    "devDependencies": {
+        "api-spec-converter": "^2.7.23",
+        "dredd": "^7.2.1",
+        "json-refs": "^3.0.12"
+    }
+}

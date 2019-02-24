@@ -1,0 +1,11 @@
+type: object
+properties:
+  fuseOrderId:
+    type: string
+    example: "asd342fda-adfasdf33-avasd-a332cda"
+  customer:
+    $ref: "../schemas/BackfeedCustomer.yml"
+  orders:
+    type: array
+    items:
+      $ref: "../schemas/BackfeedOrder.yml"
