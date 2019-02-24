@@ -1,0 +1,11 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 1
+  name:
+    type: string
+    example: foobar
+  text:
+    type: string
+    example: "foo bar baz ipsum"

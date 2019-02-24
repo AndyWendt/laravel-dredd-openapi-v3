@@ -1,21 +1,19 @@
 get:
-  summary: Receives backfeed data
+  summary: Gets a specific Post object
   parameters:
     - in: path
-      name: brand
-      description: Brand Name
+      name: post_id
+      description: Post ID
       required: true
-      example: centurylink
+      example: 1
       schema:
-        type: string
-        enum: [centurylink]
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          $ref: "../components/requestBodies/BackfeedPost.yml"
-
+        type: integer
+        example: 1
   responses:
     '200':
-      description: We received the data.
+      description: Post object
+      content:
+        application/json:
+          schema:
+            $ref: "../components/responseBodies/PostResponse.yml"
+              

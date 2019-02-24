@@ -1,5 +1,0 @@
-description: An Order Creation Response
-content:
-  application/json:
-    schema:
-      type: object
