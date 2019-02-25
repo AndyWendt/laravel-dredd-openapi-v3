@@ -4,6 +4,11 @@
 * OpenApi 3.0 docs converted to Swagger 2.0 using [api-spec-converter](https://lucybot-inc.github.io/api-spec-converter/)
 * Docs verified using [Dredd](https://dredd.org/en/latest/)  
 
+## Install Dependencies
+
+* `composer install`
+* `npm install`
+
 ## Verify the docs
 
 * Migrate the db: `php artisan migrate`
