@@ -8,22 +8,18 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\Dredd\AbstractDreddHook;
 
 
-class LeadsHook extends AbstractDreddHook
+class PostHook extends AbstractDreddHook
 {
     use DatabaseTransactions;
     use DisableSpecificMiddleware;
 
     public function handle()
     {
-        $this->before('/v2/leads > Creates a lead order > *', 'leads');
+        $this->before('/posts/{post_id} > *', 'show');
     }
 
-    public function leads(&$transaction)
+    public function show(&$transaction)
     {
-        factory(\App\Models\Brand::class)->create([
-            'name' => 'verizon',
-        ]);
-
-        $transaction->fail = false;
+        $transaction->fail = true;
     }
 }
