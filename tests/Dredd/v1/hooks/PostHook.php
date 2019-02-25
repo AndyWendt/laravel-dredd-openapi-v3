@@ -3,7 +3,6 @@
 namespace Tests\Dredd\v1\hooks;
 
 use App\Post;
-use Dredd\Hooks;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\Dredd\AbstractDreddHook;
 
