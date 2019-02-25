@@ -11,7 +11,7 @@
 
 ## Verify the docs
 
-* Migrate the db: `php artisan migrate`
+* Migrate the db (SQLITE): `php artisan migrate`
 * Serve the test site: `php artisan serve`
 * Verify and build the docs using Dredd: `./bin/docs-test.sh`
 
