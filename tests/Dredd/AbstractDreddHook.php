@@ -3,7 +3,6 @@
 namespace Tests\Dredd;
 
 use Dredd\Hooks;
-use Tests\DisableSpecificMiddleware;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
@@ -11,7 +10,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 abstract class AbstractDreddHook extends TestCase
 {
     use DatabaseTransactions;
-    use DisableSpecificMiddleware;
 
     abstract public function handle();
 

@@ -3,8 +3,7 @@
 require __DIR__ . '/../../../vendor/autoload.php';
 
 $hooks = [
-    \Tests\Dredd\v2\hooks\CenturylinkBackfeedHook::class,
-    \Tests\Dredd\v2\hooks\LeadsHook::class,
+    \Tests\Dredd\v1\hooks\PostHook::class,
 ];
 
 foreach ($hooks as $hook) {

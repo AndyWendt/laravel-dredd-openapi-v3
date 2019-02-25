@@ -1,9 +1,8 @@
 <?php
 
-namespace Tests\Dredd\v2\hooks;
+namespace Tests\Dredd\v1\hooks;
 
 use Dredd\Hooks;
-use Tests\DisableSpecificMiddleware;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\Dredd\AbstractDreddHook;
 
@@ -11,7 +10,6 @@ use Tests\Dredd\AbstractDreddHook;
 class PostHook extends AbstractDreddHook
 {
     use DatabaseTransactions;
-    use DisableSpecificMiddleware;
 
     public function handle()
     {
