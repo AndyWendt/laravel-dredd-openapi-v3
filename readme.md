@@ -8,7 +8,7 @@
 
 * Migrate the db: `php artisan migrate`
 * Serve the test site: `php artisan serve`
-* Test the docs using Dredd: `./bin/docs-test.sh`
+* Verify and build the docs using Dredd: `./bin/docs-test.sh`
 
 ## Docs
 
