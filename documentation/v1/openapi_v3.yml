@@ -9,7 +9,7 @@ servers:
     description: test Server
 
 paths:
-  "/v1/posts/{post_id}":
+  "/api/posts/{post_id}":
     $ref: "./paths/posts.yml"
 
 components:

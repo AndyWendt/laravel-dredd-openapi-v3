@@ -1,4 +1,8 @@
 type: object
+required:
+  - id
+  - name
+  - text
 properties:
   id:
     type: integer
