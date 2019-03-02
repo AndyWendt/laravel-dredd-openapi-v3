@@ -15,6 +15,3 @@ Hooks::beforeEach(function (&$transaction) use ($app) {
 Hooks::afterEach(function (&$transaction) use ($app) {
     $app->make('db')->rollback();
 });
-
-
-
