@@ -3,21 +3,13 @@
 namespace Tests\Dredd;
 
 use Dredd\Hooks;
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-
-abstract class AbstractDreddHook extends TestCase
+abstract class AbstractDreddHook
 {
-    use DatabaseTransactions;
-
     abstract public function handle();
 
     protected function before(string $path, $methodOrCallable)
     {
-        $this->createApplication();
-        $this->setUp();
-
         if (is_callable($methodOrCallable)) {
             return Hooks::before($path, $methodOrCallable);
         }
