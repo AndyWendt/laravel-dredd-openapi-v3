@@ -1,19 +1,28 @@
 get:
-  summary: Gets a specific Post object
-  parameters:
-    - in: path
-      name: post_id
-      description: Post ID
-      required: true
-      example: 1
-      schema:
-        type: integer
-        example: 1
+  summary: Gets all the Posts
   responses:
     '200':
       description: Post object
       content:
         application/json:
           schema:
-            $ref: "../components/responseBodies/PostResponse.yml"
+            type: array
+            minItems: 1
+            items:
+              type: object
+              required:
+                - id
+                - name
+                - text
+              properties:
+                id:
+                  type: integer
+                  example: 1
+                name:
+                  type: string
+                  example: foobar
+                text:
+                  type: string
+                  example: "foo bar baz ipsum"
+
               

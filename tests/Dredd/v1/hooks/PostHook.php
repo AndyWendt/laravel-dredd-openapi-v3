@@ -11,6 +11,20 @@ class PostHook extends AbstractDreddHook
     public function handle()
     {
         $this->before('/api/posts/{post_id} > *', 'show');
+        $this->before('/api/posts > *', 'index');
+    }
+
+    public function index(&$transaction)
+    {
+        Post::truncate();
+
+        factory(Post::class)->create([
+            'id' => 2,
+            'name' => 'foobar',
+            'text' => "foo bar baz ipsum",
+        ]);
+
+        $transaction->fail = false;
     }
 
     public function show(&$transaction)

@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+    public function index()
+    {
+        return response()->json(Post::all());
+    }
+
     /**
      * Display the specified resource.
      *

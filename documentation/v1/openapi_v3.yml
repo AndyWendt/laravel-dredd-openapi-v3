@@ -9,8 +9,10 @@ servers:
     description: test Server
 
 paths:
-  "/api/posts/{post_id}":
+  "/api/posts":
     $ref: "./paths/posts.yml"
+  "/api/posts/{post_id}":
+    $ref: "./paths/posts-post-id.yml"
 
 components:
   securitySchemes:

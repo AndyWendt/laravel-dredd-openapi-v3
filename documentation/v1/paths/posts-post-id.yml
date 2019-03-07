@@ -1,0 +1,19 @@
+get:
+  summary: Gets a specific Post object
+  parameters:
+    - in: path
+      name: post_id
+      description: Post ID
+      required: true
+      example: 1
+      schema:
+        type: integer
+        example: 1
+  responses:
+    '200':
+      description: Post object
+      content:
+        application/json:
+          schema:
+            $ref: "../components/responseBodies/PostResponse.yml"
+              
